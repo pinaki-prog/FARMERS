@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Farmers' Hub</title>
+
+  <!-- Inter font from Google sundarta pain -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" fill="var(--brand-500)"/>
+          <path d="M24 10c-4 6-6 9-6 14 0 6.6 5.4 12 12 12s12-5.4 12-12c0-5-2-8-6-14-3 2.5-6 2.5-12 0z" fill="#fff"/>
+        </svg>
+        <div>
+          <div class="brand-title">Farmers' Hub</div>
+          <div class="brand-sub">Crop insights • Community • Tools</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#plant-guides">Plant Guides</a></li>
+          <li><a href="#growth-tracker">Growth Tracker</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#marketplace">Marketplace</a></li>
+          <li><a href="#crop-disease">Crop Disease</a></li>
+          <li><a href="#soil-testing">Soil Testing</a></li>
+          <li><a href="#financial-tools">Financial Tools</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-pressed="false" title="Toggle dark mode">
+          <span class="sr-only">Toggle theme</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a1 1 0 0 1 .98.804A7 7 0 1 0 21.196 11a1 1 0 0 1 .804.98A10 10 0 1 1 12 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero" data-anim>
+      <div class="hero-left">
+        <h1>Grow smarter. Farm better.</h1>
+        <p class="lead">Interactive plant growth tools, community knowledge, and marketplace resources — all in one place. Track growth, identify crop issues, and manage costs with ease.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#growth-tracker">Track Growth</a>
+          <a class="btn ghost" href="#plant-guides">Plant Guides</a>
+        </div>
+        <ul class="feature-list">
+          <li>Interactive growth tracker</li>
+          <li>Crop disease image uploads</li>
+          <li>Community-driven forum</li>
+        </ul>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="illustration-card">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b0faad7b6b97e9a8a91b5f5b5b4a40a" alt="farm hero" />
+          <div class="card-badge">New • Growth Tracker</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plant-guides" data-anim>
+      <h2>Plant Growth Guides</h2>
+      <p>Curated best practices and step-by-step guides to help your crops thrive.</p>
+    </section>
+
+    <section id="growth-tracker" data-anim>
+      <h2>Interactive Growth Tracker</h2>
+      <form id="growth-tracker-form" class="grid-2">
+        <div>
+          <label for="crop-type">Select Crop:</label>
+          <select id="crop-type">
+            <option value="Wheat">Wheat</option>
+            <option value="Corn">Corn</option>
+            <option value="Rice">Rice</option>
+          </select>
+        </div>
+        <div>
+          <label for="plant-date">Planting Date:</label>
+          <input type="date" id="plant-date">
+        </div>
+        <div class="full">
+          <button type="submit" class="btn primary">Track Growth</button>
+        </div>
+      </form>
+      <div id="growth-tracker-result" class="result-box" aria-live="polite"></div>
+    </section>
+
+    <section id="community" data-anim>
+      <h2>Community Forums</h2>
+      <div id="forum-posts" class="forum-list"></div>
+
+      <form id="forum-post-form" class="card-form">
+        <div>
+          <label for="post-title">Title:</label>
+          <input type="text" id="post-title" placeholder="Short descriptive title">
+        </div>
+        <div>
+          <label for="post-content">Content:</label>
+          <textarea id="post-content" placeholder="Share your tips or ask a question"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Post</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="marketplace" data-anim>
+      <h2>Marketplace</h2>
+      <div id="product-listings" class="product-grid"></div>
+    </section>
+
+    <section id="crop-disease" data-anim>
+      <h2>Crop Disease Identification</h2>
+      <form id="disease-form" class="card-form">
+        <div>
+          <label for="crop-name">Select Crop:</label>
+          <select id="crop-name">
+            <option value="Wheat">Wheat</option>
+            <option value="Corn">Corn</option>
+          </select>
+        </div>
+        <div>
+          <label for="disease-image">Upload Image:</label>
+          <input type="file" id="disease-image" accept="image/*">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Identify Disease</button>
+        </div>
+      </form>
+      <div id="disease-result" class="result-box"></div>
+    </section>
+
+    <section id="soil-testing" data-anim>
+      <h2>Soil Testing and Analysis</h2>
+      <form id="soil-test-form" class="card-form">
+        <div>
+          <label for="soil-sample">Upload Soil Test Report:</label>
+          <input type="file" id="soil-sample" accept=".pdf,.doc,.docx">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Analyze</button>
+        </div>
+      </form>
+      <div id="soil-test-result" class="result-box"></div>
+    </section>
+
+    <section id="financial-tools" data-anim>
+      <h2>Financial Tools and Calculators</h2>
+      <form id="cost-calculator-form" class="grid-2">
+        <div>
+          <label for="crop-type-calc">Select Crop:</label>
+          <select id="crop-type-calc">
+            <option value="Wheat">Wheat</option>
+            <option value="Corn">Corn</option>
+          </select>
+        </div>
+        <div>
+          <label for="area">Area (acres):</label>
+          <input type="number" id="area" step="0.01" placeholder="e.g., 2.5">
+        </div>
+        <div>
+          <label for="cost-per-acre">Cost per Acre:</label>
+          <input type="number" id="cost-per-acre" step="0.01" placeholder="e.g., 150">
+        </div>
+        <div class="full">
+          <button type="submit" class="btn primary">Calculate Cost</button>
+        </div>
+      </form>
+      <div id="cost-calculation-result" class="result-box"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Farmers' Hub • Crafted for growers</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

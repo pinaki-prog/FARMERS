@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers' Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#plant-guides">Plant Guides</a></li>
+                <li><a href="#growth-tracker">Growth Tracker</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#crop-disease">Crop Disease</a></li>
+                <li><a href="#soil-testing">Soil Testing</a></li>
+                <li><a href="#financial-tools">Financial Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Plant Growth Guides -->
+        <section id="plant-guides">
+            <h2>Plant Growth Guides</h2>
+            <!-- Add kariba pare plant growth guide content ethi  -->
+        </section>
+
+        <!-- Interactive Growth Tracker -->
+        <section id="growth-tracker">
+            <h2>Interactive Growth Tracker</h2>
+            <form id="growth-tracker-form">
+                <label for="crop-type">Select Crop:</label>
+                <select id="crop-type">
+                    <option value="1">Crop 1</option>
+                    <option value="2">Crop 2</option>
+                    <!-- au add kariba crop options darkar padile -->
+                </select>
+                <label for="plant-date">Planting Date:</label>
+                <input type="date" id="plant-date">
+                <button type="submit">Track Growth</button>
+            </form>
+            <div id="growth-tracker-result">
+                <!-- Growth tracking results dekha haba ethi -->
+            </div>
+        </section>
+
+        <!-- Community Forums -->
+        <section id="community">
+            <h2>Community Forums</h2>
+            <div id="forum-posts">
+                <!-- Forum posts will be dynamically populated here -->
+            </div>
+            <form id="forum-post-form">
+                <label for="post-title">Title:</label>
+                <input type="text" id="post-title">
+                <label for="post-content">Content:</label>
+                <textarea id="post-content"></textarea>
+                <button type="submit">Post</button>
+            </form>
+        </section>
+
+        <!-- Marketplace -->
+        <section id="marketplace">
+            <h2>Marketplace</h2>
+            <div id="product-listings">
+                <!-- Product listings will be dynamically populated here -->
+            </div>
+        </section>
+
+        <!-- Crop Disease Identification -->
+        <section id="crop-disease">
+            <h2>Crop Disease Identification</h2>
+            <form id="disease-form">
+                <label for="crop-name">Select Crop:</label>
+                <select id="crop-name">
+                    <option value="1">Crop 1</option>
+                    <option value="2">Crop 2</option>
+                    <!-- au add kariba crop options darkar padile -->
+                </select>
+                <label for="disease-image">Upload Image:</label>
+                <input type="file" id="disease-image" accept="image/*">
+                <button type="submit">Identify Disease</button>
+            </form>
+            <div id="disease-result">
+                <!-- Disease identification results will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Soil Testing and Analysis -->
+        <section id="soil-testing">
+            <h2>Soil Testing and Analysis</h2>
+            <form id="soil-test-form">
+                <label for="soil-sample">Upload Soil Test Report:</label>
+                <input type="file" id="soil-sample" accept=".pdf, .doc, .docx">
+                <button type="submit">Analyze</button>
+            </form>
+            <div id="soil-test-result">
+                <!-- Soil test results dekha haba ethi -->
+            </div>
+        </section>
+
+        <!-- Financial Tools and Calculators -->
+        <section id="financial-tools">
+            <h2>Financial Tools and Calculators</h2>
+            <form id="cost-calculator-form">
+                <label for="crop-type-calc">Select Crop:</label>
+                <select id="crop-type-calc">
+                    <option value="1">Crop 1</option>
+                    <option value="2">Crop 2</option>
+                    <!-- au add kariba crop options darkar padile -->
+                </select>
+                <label for="area">Area (in acres):</label>
+                <input type="number" id="area" step="0.01">
+                <label for="cost-per-acre">Cost per Acre:</label>
+                <input type="number" id="cost-per-acre" step="0.01">
+                <button type="submit">Calculate Cost</button>
+            </form>
+            <div id="cost-calculation-result">
+                <!-- Cost calculation results dekha haba ethi -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Farmers' Hub</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 

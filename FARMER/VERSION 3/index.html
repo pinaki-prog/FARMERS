@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers' Hub | Smart Agriculture</title>
+    <!-- FontAwesome neichi for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Toast Notification pain Container -->
+    <div id="toast-container"></div>
+
+    <!-- Header Section -->
+    <header id="main-header">
+        <div class="logo">
+            <i class="fa-solid fa-seedling"></i> Farmers' Hub
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#plant-guides"><i class="fa-solid fa-book-open"></i> Guides</a></li>
+                <li><a href="#growth-tracker"><i class="fa-solid fa-chart-line"></i> Tracker</a></li>
+                <li><a href="#community"><i class="fa-solid fa-users"></i> Forum</a></li>
+                <li><a href="#marketplace"><i class="fa-solid fa-shop"></i> Market</a></li>
+                <li><a href="#tools"><i class="fa-solid fa-toolbox"></i> Tools</a></li>
+            </ul>
+            <div class="mobile-menu-icon" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section nua te add karchi baki 2 version ru -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Cultivating the <span class="highlight">Future</span></h1>
+            <p>Empowering farmers with smart tools, community support, and direct market access.</p>
+            <a href="#growth-tracker" class="cta-button">Start Tracking <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Plant Growth Guides au add haba later-->
+        <section id="plant-guides" class="fade-in">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-leaf"></i> Plant Growth Guides</h2>
+                <p>Expert advice for your crops</p>
+            </div>
+            <div class="guides-grid">
+                <!-- Static Guide Cards (to bhariba pain empty section ku) -->
+                <div class="guide-card">
+                    <div class="icon-box"><i class="fa-solid fa-wheat-awn"></i></div>
+                    <h3>Wheat Cultivation</h3>
+                    <p>Optimal soil temp: 15-20°C. Requires moderate rainfall.</p>
+                    <button class="small-btn">Read More</button>
+                </div>
+                <div class="guide-card">
+                    <div class="icon-box"><i class="fa-solid fa-carrot"></i></div>
+                    <h3>Organic Vegetables</h3>
+                    <p>Best practices for pest control without chemicals.</p>
+                    <button class="small-btn">Read More</button>
+                </div>
+                <div class="guide-card">
+                    <div class="icon-box"><i class="fa-solid fa-apple-whole"></i></div>
+                    <h3>Orchard Management</h3>
+                    <p>Pruning techniques and harvest timing for maximum yield.</p>
+                    <button class="small-btn">Read More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Growth Tracker au options pare add karibu-->
+        <section id="growth-tracker" class="fade-in">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-stopwatch"></i> Growth Tracker</h2>
+            </div>
+            <div class="split-layout">
+                <form id="growth-tracker-form">
+                    <label for="crop-type">Select Crop:</label>
+                    <select id="crop-type">
+                        <option value="Wheat">Wheat</option>
+                        <option value="Corn">Corn</option>
+                        <option value="Rice">Rice</option>
+                        <option value="Tomatoes">Tomatoes</option>
+                    </select>
+                    <label for="plant-date">Planting Date:</label>
+                    <input type="date" id="plant-date" required>
+                    <button type="submit">Track Growth</button>
+                </form>
+                <div id="growth-tracker-result" class="result-box hidden">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Forums improve karibaku padiba aku-->
+        <section id="community" class="fade-in">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-comments"></i> Community Forums</h2>
+            </div>
+            
+            <form id="forum-post-form">
+                <div class="input-group">
+                    <input type="text" id="post-title" placeholder="Topic Title" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="post-content" placeholder="Share your experience or ask a question..." required></textarea>
+                </div>
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Post</button>
+            </form>
+
+            <div id="forum-posts">
+                <!-- Forum posts will be dynamically populated here -->
+            </div>
+        </section>
+
+        <!-- Marketplace same here better -->
+        <section id="marketplace" class="fade-in">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-basket-shopping"></i> Marketplace</h2>
+            </div>
+            <div id="product-listings">
+                <!-- Product listings will be dynamically populated here -->
+            </div>
+        </section>
+
+        <div id="tools">
+            <!-- Wrapper for tools to group them nicely sundar dekheiba pain -->
+            
+            <!-- Crop Disease Identification top class important -->
+            <section id="crop-disease" class="fade-in">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-magnifying-glass-chart"></i> Disease AI</h2>
+                </div>
+                <div class="split-layout">
+                    <form id="disease-form">
+                        <label for="crop-name">Select Crop:</label>
+                        <select id="crop-name">
+                            <option value="Wheat">Wheat</option>
+                            <option value="Rice">Rice</option>
+                            <option value="Potato">Potato</option>
+                        </select>
+                        <label class="file-upload">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Upload Image
+                            <input type="file" id="disease-image" accept="image/*" required>
+                        </label>
+                        <div id="disease-preview-area"></div>
+                        <button type="submit">Identify Disease</button>
+                    </form>
+                    <div id="disease-result" class="result-box hidden"></div>
+                </div>
+            </section>
+
+            <!-- Soil Testing and Analysis top level-->
+            <section id="soil-testing" class="fade-in">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-flask"></i> Soil Analysis</h2>
+                </div>
+                <form id="soil-test-form">
+                    <label class="file-upload">
+                        <i class="fa-solid fa-file-pdf"></i> Upload Soil Report (PDF/DOC)
+                        <input type="file" id="soil-sample" accept=".pdf, .doc, .docx" required>
+                    </label>
+                    <button type="submit">Analyze Report</button>
+                </form>
+                <div id="soil-test-result" class="result-box hidden"></div>
+            </section>
+
+            <!-- Financial Tools eta bohut darkar -->
+            <section id="financial-tools" class="fade-in">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-calculator"></i> Cost Calculator</h2>
+                </div>
+                <form id="cost-calculator-form">
+                    <div class="form-grid">
+                        <div>
+                            <label for="crop-type-calc">Crop:</label>
+                            <select id="crop-type-calc">
+                                <option value="Wheat">Wheat</option>
+                                <option value="Corn">Corn</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="area">Area (acres):</label>
+                            <input type="number" id="area" step="0.01" placeholder="e.g. 5.5">
+                        </div>
+                        <div class="full-width">
+                            <label for="cost-per-acre">Cost per Acre ($):</label>
+                            <input type="number" id="cost-per-acre" step="0.01" placeholder="e.g. 200">
+                        </div>
+                    </div>
+                    <button type="submit">Calculate Total</button>
+                </form>
+                <div id="cost-calculation-result" class="result-box hidden"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Farmers' Hub. All rights reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
